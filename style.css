@@ -1,0 +1,101 @@
+/* Custom styles để tùy chỉnh Bootstrap */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #d4a373;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://via.placeholder.com/1920x1080?text=Coffee+Shop') no-repeat center center/cover;
+    margin-top: 56px; /* Chừa chỗ cho navbar fixed-top */
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* Menu Section */
+.menu-scroll {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 20px; /* Để tránh bị cắt khi cuộn */
+    -webkit-overflow-scrolling: touch; /* Cuộn mượt trên mobile */
+}
+
+.menu-scroll::-webkit-scrollbar {
+    height: 8px; /* Độ cao thanh cuộn */
+}
+
+.menu-scroll::-webkit-scrollbar-thumb {
+    background: #d4a373; /* Màu thanh cuộn */
+    border-radius: 4px;
+}
+
+.menu-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Màu nền thanh cuộn */
+}
+
+.menu-item {
+    flex: 0 0 auto;
+    width: 200px; /* Chiều rộng mỗi món */
+    margin-right: 20px; /* Khoảng cách giữa các món */
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title {
+    font-size: 20px;
+}
+
+.card-text {
+    color: #d4a373;
+    font-size: 16px;
+}
+
+/* News Section */
+.bg-light {
+    background-color: #f9f9f9 !important;
+}
+
+/* Contact Section */
+.contact-form .form-control {
+    border-radius: 5px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer a:hover {
+    color: #d4a373;
+}
