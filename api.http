@@ -7,30 +7,4 @@ Content-Type: application/json
 ###
 
 # Kiểm tra endpoint POST /api/book (Đặt bàn)
-POST http://localhost:3000/api/book
-Content-Type: application/json
 
-{
-    "name": "John Doe",
-    "email": "john.doe@example.com",
-    "number": "1234567890",
-    "message": "I'd like to reserve a table for 2 at 7 PM."
-}
-
-###
-
-# Kiểm tra endpoint POST /api/book với dữ liệu không đầy đủ (Kiểm tra lỗi)
-POST http://localhost:3000/api/book
-Content-Type: application/json
-
-{
-    "name": "Jane Doe",
-    "email": "",
-    "number": "0987654321"
-}
-
-###
-
-# Kiểm tra endpoint GET /api/bookings (Xem danh sách đặt bàn)
-GET http://localhost:3000/api/bookings
-Content-Type: application/json

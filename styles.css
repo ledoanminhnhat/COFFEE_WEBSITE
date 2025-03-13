@@ -1,0 +1,463 @@
+/* Navbar Styles */
+.navbar {
+    background-color: rgba(6, 119, 47, 0.75) !important;
+    backdrop-filter: blur(100px);
+    padding: 0.5rem 0;
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.05);
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+    margin: 0 5px;
+}
+
+.nav-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.964);
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #e2f200 !important;
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+.navbar-toggler {
+    border-color: #ffffff;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.btn-outline-dark {
+    border-color: #ffffff;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.btn-outline-dark i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+    background-color: #ffffff;
+    color: #0ebf40;
+    transform: translateY(-2px);
+}
+
+.btn-outline-dark:hover i {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments for navbar */
+@media (max-width: 991px) {
+    .nav-item:not(:last-child)::after {
+        display: none;
+    }
+    
+    .nav-link.active::after {
+        width: 100%;
+    }
+}
+
+/* Responsive adjustments for buttons */
+@media (max-width: 768px) {
+    .btn-outline-dark {
+        width: 36px;
+        height: 36px;
+        padding: 6px;
+    }
+    
+    .btn-outline-dark i {
+        font-size: 16px;
+    }
+}
+
+/* Banner Styles */
+.banner {
+    padding-top: 100px; /* Thêm padding-top để tránh bị navbar che */
+    background-color: rgba(100, 203, 89, 0.6);
+    color: rgb(16, 1, 1);
+    text-align: center;
+    padding-bottom: 50px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.banner h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.banner .btn-primary {
+    background-color: rgb(22, 106, 3);
+    color: #f7f7f7;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.banner .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Existing styles */
+
+body {
+    background-image: url('tao_login.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding-top: 76px; 
+}
+
+/* Make content sections more visible against the background */
+.banner, .products, .contact {
+    background-color: rgb(255, 255, 255,0.75);
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust card styles for better visibility */
+.card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.card .btn-primary {
+    background-color: #0ebf40;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.card .btn-primary:hover {
+    background-color: #0a9e33;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(14, 191, 64, 0.3);
+}
+
+/* Custom styles for buttons */
+.btn-primary {
+    background-color: #0ebf40;
+    border-color: #0ebf40;
+}
+
+.btn-primary:hover {
+    background-color: #0a9e33;
+    border-color: #0a9e33;
+}
+
+/* Add some spacing between sections */
+section {
+    margin-bottom: 30px;
+}
+
+/* Make text more readable */
+h1, h2, h3, p {
+    color: #004f2a;
+}
+
+/* Add some padding to containers */
+.container {
+    padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding-top: 66px;
+    }
+    
+    .banner, .products, .contact {
+        margin: 10px 0;
+    }
+    
+    .card-img-top {
+        height: 180px;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+    }
+    
+    .card-text {
+        font-size: 1rem;
+    }
+    
+    .card .btn-primary {
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(65, 179, 107, 0.7) !important;
+    backdrop-filter: blur(5px);
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem 0;
+}
+
+footer p {
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 1.5rem 0;
+        background-color: rgba(65, 179, 107, 0.8) !important;
+    }
+    
+    footer p {
+        font-size: 1rem;
+    }
+}
+
+/* Products Section */
+.products {
+    padding: 4rem 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.products h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* About Section Styles */
+.about {
+    padding: 5rem 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #0ebf40, #64cb59);
+}
+
+.about h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #01432e;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.about h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #0ebf40, #64cb59);
+    border-radius: 3px;
+}
+
+.about-content {
+    padding: 2rem;
+    background-color: rgba(23, 136, 47, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item i {
+    font-size: 2.5rem;
+    color: #0ebf40;
+    margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+    font-size: 1.3rem;
+    color: #086e3e;
+    margin-bottom: 1rem;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments for about section */
+@media (max-width: 768px) {
+    .about {
+        padding: 3rem 0;
+        margin: 20px 0;
+    }
+
+    .about h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-content {
+        padding: 1.5rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .feature-item {
+        padding: 1.5rem;
+    }
+}
