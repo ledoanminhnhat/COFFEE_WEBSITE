@@ -181,7 +181,7 @@ body {
 
 /* Adjust card styles for better visibility */
 .card {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgb(255, 255, 255);
     border: none;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
