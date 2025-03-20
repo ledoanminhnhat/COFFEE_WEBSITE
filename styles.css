@@ -1,12 +1,41 @@
+/* Global Styles */
+body {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding-top: 76px;
+}
+
+/* Make text more readable */
+h1, h2, h3, p {
+    color: #004f2a;
+}
+
+/* Add some padding to containers */
+.container {
+    padding: 20px;
+}
+
+/* Add some spacing between sections */
+section {
+    margin-bottom: 30px;
+}
+
 /* Navbar Styles */
 .navbar {
-    background-color: rgba(6, 119, 47, 0.75) !important;
+    background-color: rgba(56, 149, 90, 0.75) !important;
     backdrop-filter: blur(100px);
     padding: 0.5rem 0;
 }
 
 .navbar-brand img {
     transition: transform 0.3s ease;
+    height: 50px;
+    width: auto;
+    object-fit: contain;
 }
 
 .navbar-brand img:hover {
@@ -99,33 +128,9 @@
     transform: scale(1.1);
 }
 
-/* Responsive adjustments for navbar */
-@media (max-width: 991px) {
-    .nav-item:not(:last-child)::after {
-        display: none;
-    }
-    
-    .nav-link.active::after {
-        width: 100%;
-    }
-}
-
-/* Responsive adjustments for buttons */
-@media (max-width: 768px) {
-    .btn-outline-dark {
-        width: 36px;
-        height: 36px;
-        padding: 6px;
-    }
-    
-    .btn-outline-dark i {
-        font-size: 16px;
-    }
-}
-
 /* Banner Styles */
 .banner {
-    padding-top: 100px; /* Thêm padding-top để tránh bị navbar che */
+    padding-top: 100px;
     background-color: rgba(100, 203, 89, 0.6);
     color: rgb(16, 1, 1);
     text-align: center;
@@ -159,27 +164,7 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Existing styles */
-
-body {
-    background-image: url('tao_login.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    padding-top: 76px; 
-}
-
-/* Make content sections more visible against the background */
-.banner, .products, .contact {
-    background-color: rgb(255, 255, 255,0.75);
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Adjust card styles for better visibility */
+/* Card & Product Styles */
 .card {
     background-color: rgb(255, 255, 255);
     border: none;
@@ -238,7 +223,7 @@ body {
     box-shadow: 0 4px 10px rgba(14, 191, 64, 0.3);
 }
 
-/* Custom styles for buttons */
+/* Button Styles */
 .btn-primary {
     background-color: #0ebf40;
     border-color: #0ebf40;
@@ -249,99 +234,7 @@ body {
     border-color: #0a9e33;
 }
 
-/* Add some spacing between sections */
-section {
-    margin-bottom: 30px;
-}
-
-/* Make text more readable */
-h1, h2, h3, p {
-    color: #004f2a;
-}
-
-/* Add some padding to containers */
-.container {
-    padding: 20px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    body {
-        padding-top: 66px;
-    }
-    
-    .banner, .products, .contact {
-        margin: 10px 0;
-    }
-    
-    .card-img-top {
-        height: 180px;
-    }
-    
-    .card-title {
-        font-size: 1.3rem;
-    }
-    
-    .card-text {
-        font-size: 1rem;
-    }
-    
-    .card .btn-primary {
-        padding: 0.6rem 1.5rem;
-    }
-}
-
-/* Footer Styles */
-footer {
-    background-color: rgba(65, 179, 107, 0.7) !important;
-    backdrop-filter: blur(5px);
-    border-top: 2px solid rgba(255, 255, 255, 0.2);
-    padding: 2rem 0;
-}
-
-footer p {
-    color: #ffffff !important;
-    font-size: 1.1rem;
-    margin: 0;
-    font-weight: 500;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-footer .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Responsive adjustments for footer */
-@media (max-width: 768px) {
-    footer {
-        padding: 1.5rem 0;
-        background-color: rgba(65, 179, 107, 0.8) !important;
-    }
-    
-    footer p {
-        font-size: 1rem;
-    }
-}
-
-/* Products Section */
-.products {
-    padding: 4rem 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.products h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 3rem;
-    text-align: center;
-}
-
-/* About Section Styles */
+/* About Page Styles */
 .about {
     padding: 5rem 0;
     background-color: rgba(255, 255, 255, 0.95);
@@ -437,27 +330,155 @@ footer .container {
     margin-bottom: 0;
 }
 
-/* Responsive adjustments for about section */
+/* Auth Pages Styles */
+/* Register Page */
+.register-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.register-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.register-form h2 {
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.register-form .form-control {
+    height: 50px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.register-form .form-control:focus {
+    border-color: #0ebf40;
+    box-shadow: 0 0 0 0.2rem rgba(14, 191, 64, 0.25);
+}
+
+.btn-register {
+    height: 50px;
+    background-color: #0ebf40;
+    border: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #0a9e33;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(14, 191, 64, 0.3);
+}
+
+/* Login Page */
+.login-section {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(65, 179, 107, 0.7) !important;
+    backdrop-filter: blur(5px);
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem 0;
+}
+
+footer p {
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Styles */
+/* Tablet and smaller */
+@media (max-width: 991px) {
+    .nav-item:not(:last-child)::after {
+        display: none;
+    }
+    
+    .nav-link.active::after {
+        width: 100%;
+    }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-    .about {
-        padding: 3rem 0;
-        margin: 20px 0;
+    body {
+        padding-top: 66px;
     }
-
-    .about h2 {
-        font-size: 2.2rem;
-        margin-bottom: 2rem;
+    
+    .banner, .products, .contact {
+        margin: 10px 0;
     }
-
-    .about-content {
-        padding: 1.5rem;
+    
+    .card-img-top {
+        height: 180px;
     }
-
-    .about-content p {
+    
+    .card-title {
+        font-size: 1.3rem;
+    }
+    
+    .card-text {
         font-size: 1rem;
     }
-
-    .feature-item {
+    
+    .btn-outline-dark {
+        width: 36px;
+        height: 36px;
+        padding: 6px;
+    }
+    
+    .btn-outline-dark i {
+        font-size: 16px;
+    }
+    
+    footer {
+        padding: 1.5rem 0;
+    }
+    
+    footer p {
+        font-size: 1rem;
+    }
+    
+    .register-form {
         padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .register-form h2 {
+        font-size: 1.75rem;
+    }
+
+    .register-form .form-control {
+        height: 45px;
+    }
+
+    .btn-register {
+        height: 45px;
     }
 }
