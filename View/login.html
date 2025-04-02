@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
@@ -18,7 +20,8 @@
             <a class="navbar-brand" href="project.html">
                 <img src="Images/logo.png" alt="Táo Coffee Logo" height="50">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -61,7 +64,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="login-form bg-white p-4 shadow rounded">
                         <h2 class="text-center mb-4">Đăng nhập</h2>
-                        <form>
+                        <form id="login-form">
                             <!-- Email/Username Field -->
                             <div class="mb-3">
                                 <label for="username" class="form-label">Email hoặc tên đăng nhập</label>
@@ -69,10 +72,10 @@
                                     <span class="input-group-text">
                                         <i class="fas fa-user"></i>
                                     </span>
-                                    <input type="text" class="form-control" id="username" placeholder="Nhập email hoặc tên đăng nhập">
+                                    <input type="text" class="form-control" id="username"
+                                        placeholder="Nhập email hoặc tên đăng nhập">
                                 </div>
                             </div>
-
                             <!-- Password Field -->
                             <div class="mb-3">
                                 <label for="password" class="form-label">Mật khẩu</label>
@@ -80,8 +83,9 @@
                                     <span class="input-group-text">
                                         <i class="fas fa-lock"></i>
                                     </span>
-                                    <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu">
-                                    <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                    <input type="password" class="form-control" id="password"
+                                        placeholder="Nhập mật khẩu">
+                                    <button class="btn btn-outline-secondary" type="button" id="toggle-password">
                                         <i class="fas fa-eye"></i>
                                     </button>
                                 </div>
@@ -90,35 +94,25 @@
                             <!-- Remember Me & Forgot Password -->
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="rememberMe">
-                                    <label class="form-check-label" for="rememberMe">Ghi nhớ đăng nhập</label>
+                                    <input type="checkbox" class="form-check-input" id="remember-me">
+                                    <label class="form-check-label" for="remember-me">Ghi nhớ đăng nhập</label>
                                 </div>
-                                <a href="#" class="text-primary text-decoration-none">Quên mật khẩu?</a>
+                                <a href="#" id="forgot-password-link" class="text-primary text-decoration-none">Quên mật
+                                    khẩu?</a>
                             </div>
 
                             <!-- Login Button -->
-                            <button type="submit" class="btn btn-primary w-100 mb-3">ĐĂNG NHẬP</button>
+                            <button type="submit" id="login-button" class="btn btn-primary w-100 mb-3">ĐĂNG
+                                NHẬP</button>
 
                             <!-- Register Link -->
                             <div class="text-center">
                                 <span>Chưa có tài khoản? </span>
-                                <a href="register.html" class="text-primary text-decoration-none">Đăng ký ngay</a>
-                            </div>
-
-                            <!-- Social Login -->
-                            <div class="mt-4">
-                                <p class="text-center mb-3">Hoặc đăng nhập với</p>
-                                <div class="d-flex justify-content-center gap-3">
-                                    <button type="button" class="btn btn-outline-primary">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-outline-danger">
-                                        <i class="fab fa-google"></i>
-                                    </button>
-                                    
-                                </div>
+                                <a href="register.html" id="register-link"
+                                    class="text-primary text-decoration-none">Đăng ký ngay</a>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>
@@ -139,10 +133,10 @@
     <!-- Login Page JS -->
     <script>
         // Toggle password visibility
-        document.getElementById('togglePassword').addEventListener('click', function() {
+        document.getElementById('togglePassword').addEventListener('click', function () {
             const passwordInput = document.getElementById('password');
             const icon = this.querySelector('i');
-            
+
             if (passwordInput.type === 'password') {
                 passwordInput.type = 'text';
                 icon.classList.remove('fa-eye');
@@ -154,5 +148,8 @@
             }
         });
     </script>
+    <script src="login.js"></script>z
+
 </body>
+
 </html>

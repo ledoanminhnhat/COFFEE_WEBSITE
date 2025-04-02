@@ -3,6 +3,8 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
 const productRoutes = require('./routes/productRoutes'); 
+const customerRoutes = require('./routes/customerRoutes');
+const cartRoutes = require('./routes/cartRoutes');
 
 dotenv.config();
 
@@ -17,6 +19,8 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/products', productRoutes);
+app.use('/api/customers', customerRoutes); 
+app.use('/api/carts', cartRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
